@@ -21,6 +21,7 @@
     "homepage": "https://github.com/nolanfbetts/strava_orchestration#readme",
     "dependencies": {
         "axios": "^1.1.2",
+        "cors": "^2.8.5",
         "express": "^4.18.2",
         "https": "^1.0.0",
         "strava-v3": "^2.1.0"

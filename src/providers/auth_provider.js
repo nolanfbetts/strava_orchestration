@@ -28,4 +28,24 @@ async function getAthleteInfoPackage() {
 
     // const payload3 = await strava.athlete.listClubs({ id: 75183280 });
 }
-export default getAthleteInfoPackage;
+
+async function getAuthToken(oauth_code) {
+    console.log(oauth_code);
+    try {
+        const auth = await strava.oauth.getToken(oauth_code);
+        console.log(auth);
+        const response = {
+            status: 200,
+            data: auth,
+        };
+        return response;
+    } catch (e) {
+        console.log(e);
+        const response = {
+            status: 444,
+            data: e,
+        };
+        return response;
+    }
+}
+export default getAuthToken;
